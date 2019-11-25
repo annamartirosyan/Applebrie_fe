@@ -6,12 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private readonly httpClient: HttpClient) {}
 
-  getRates() {
+  public getRates() {
     return this.httpClient.get('https://api.exchangeratesapi.io/latest');
   }
-  getEmployees() {
+  public getEmployees() {
     return this.httpClient.get('https://randomuser.me/api?results=25');
   }
 }

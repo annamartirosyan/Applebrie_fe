@@ -7,16 +7,17 @@ import { ApiService } from '../api.service';
   styleUrls: ['./rates.component.scss']
 })
 export class RatesComponent implements OnInit {
-  ratesData: any;
-  input: number;
-  rate: any;
-  output: number;
+  public ratesData: any;
+  public input: number;
+  public rate: number;
+  public output: number;
 
-  constructor( private apiService: ApiService ) {}
+  constructor(private apiService: ApiService) {}
 
-  convert() {
+  public convert() {
     this.output = this.rate * this.input;
   }
+
   ngOnInit() {
     this.apiService.getRates()
       .subscribe((data: any) => {
