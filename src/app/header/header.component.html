@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div class="container-fluid modal-header header-navbar">
+    <div class="row">
+      <div class="navbar-header col-xs-4">
+        <a routerLink="/" class="navbar-brand"><img class="header-navbar__logo" alt="" src="../../assets/images/logo.png"></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" appDropdown>
+            <a class="dropdown-toggle btn btn-lg header-navbar-menu__button" role="button"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul class="dropdown-menu" routerLinkActive="active">
+              <li><a routerLink="/home">Home</a></li>
+              <li><a routerLink="/rates">Rates</a></li>
+              <li><a routerLink="/employees">Employees</a></li>
+              <li><a routerLink="/about">About us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

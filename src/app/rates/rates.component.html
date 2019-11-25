@@ -1,0 +1,85 @@
+<div class="container-fluid">
+  <div class="row">
+    <p class="textarea-center home-textarea__large margin-bottom"><b>Currency converter</b></p>
+  </div>
+  <div class="row">
+    <div class="col-xs-2">
+      <div class="form-group">
+
+        <label>
+          <span title="date">Date:</span>
+        </label>
+        <input type="text"
+               class="form-control"
+               id="date"
+               name="date"
+               [value]="ratesData.date"
+               disabled>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2">
+      <div class="form-group">
+        <label>
+          <span title="base">Base:</span>
+        </label>
+        <input type="text"
+               class="form-control"
+               id="base"
+               name="base"
+               [value]="ratesData.base"
+               disabled>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group">
+        <label>
+          <span title="input">Your input:</span>
+        </label>
+        <input type="text"
+               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+               class="form-control"
+               id="input"
+               name="input"
+               [(ngModel)]=input>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div>
+        <label>
+          <span title="currency">Select currency:</span>
+        </label>
+        <select class="form-control"
+                id="currency"
+                name="currency"
+                [(ngModel)]="rate">
+          <option value="default">Select currency</option>
+          <option *ngFor="let currency of ratesData.rates  | keyvalue" [value]="currency.value">
+            {{currency.key}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group">
+        <label>
+          <span title="input">Your output:</span>
+        </label>
+        <input type="text"
+               class="form-control"
+               id="output"
+               name="output"
+               [(ngModel)]=output
+               disabled>
+      </div>
+    </div>
+    <div class="col-xs-1">
+      <div class="form-group">
+        <label>
+          <span></span>
+        </label>
+        <button class="btn btn-lg rates-button" (click)="convert()">Convert</button>
+      </div>
+    </div>
+  </div>
+</div>

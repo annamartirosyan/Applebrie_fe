@@ -1,0 +1,14 @@
+$base: #fff;
+$body-bg: #000;
+$purple: #646ecb;
+$light-gray: #95989a;
+
+$navbar-height: 170px;
+
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$font-size-base: 14px;
+$font-size-large-3: ceil($font-size-base * 4.28); // ~60px
+$font-size-large-2: ceil($font-size-base * 1.93); // ~27px
+$font-size-large-1: ceil($font-size-base * 1.14); // ~16px
+$font-size-small-1: ceil(($font-size-base * 0.71)); // ~10px

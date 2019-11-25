@@ -1,0 +1,22 @@
+@import "../../variables/variables.scss";
+
+.header-navbar {
+  height: $navbar-height;
+  background: $body-bg;
+  color: $base;
+  border-color: $body-bg;
+}
+
+.header-navbar__logo {
+  height: 125px;
+  margin-left: 30px;
+}
+
+.glyphicon-align-justify {
+  color: $base;
+  font-size: $font-size-large-2;
+  margin: 30px 30px 5px 5px;
+}
+
+
+
